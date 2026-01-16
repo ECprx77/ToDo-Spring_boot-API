@@ -19,15 +19,15 @@ public class TaskController {
         this.taskService = taskService;
     }
 
-    // GET /api/tasks/Afficher - Récupérer toutes les tâches
-    @GetMapping("/Afficher")
+    // GET /api/tasks/afficher - Récupérer toutes les tâches
+    @GetMapping("/afficher")
     public ResponseEntity<List<Task>> getAllTasks() {
         List<Task> tasks = taskService.getAllTasks();
         return ResponseEntity.ok(tasks);
     }
 
-    // GET /api/tasks/Afficher/{id} - Récupérer une tâche par son ID
-    @GetMapping("/Afficher/{id}")
+    // GET /api/tasks/afficher/{id} - Récupérer une tâche par son ID
+    @GetMapping("/afficher/{id}")
     public ResponseEntity<Task> getTaskById(@PathVariable Long id) {
         Task task = taskService.getTaskById(id);
         return ResponseEntity.ok(task);
